@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "Education_AOI_within_Flood_Extent_V7",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "osm_id": 4969579345, "amenity": "school", "Final_Name": "Shree Chipleti Pra Vi", "GAPA_NAPA_min": "Uttargaya", "Long": 85.208176, "Lat": 28.056387 }, "geometry": { "type": "Point", "coordinates": [ 85.2081762, 28.0563867 ] } },
+{ "type": "Feature", "properties": { "osm_id": 5055276919, "amenity": "school", "Final_Name": "Shri Ganeshman Singh Memorial Primary School", "GAPA_NAPA_min": "Tarkeshwar", "Long": 85.02767, "Lat": 27.849136 }, "geometry": { "type": "Point", "coordinates": [ 85.0276701, 27.8491356 ] } },
+{ "type": "Feature", "properties": { "osm_id": 4941662039, "amenity": "school", "Final_Name": "Shri Buddhi Bikash Pra V", "GAPA_NAPA_min": "Benighat Rorang", "Long": 84.748677, "Lat": 27.803501 }, "geometry": { "type": "Point", "coordinates": [ 84.7486773, 27.8035007 ] } },
+{ "type": "Feature", "properties": { "osm_id": null, "amenity": null, "Final_Name": "Shree Bhadrakali Gurukul Saskriti Bidhyalaya", "GAPA_NAPA_min": "Gajuri", "Long": 84.835907, "Lat": 27.807022 }, "geometry": { "type": "Point", "coordinates": [ 84.8359065, 27.8070224 ] } },
+{ "type": "Feature", "properties": { "osm_id": null, "amenity": null, "Final_Name": "Shree Baludaya Pra Vi", "GAPA_NAPA_min": "Uttargaya", "Long": 85.208105, "Lat": 28.073383 }, "geometry": { "type": "Point", "coordinates": [ 85.2081045, 28.0733826 ] } },
+{ "type": "Feature", "properties": { "osm_id": null, "amenity": null, "Final_Name": "Shree Chetana Primary School", "GAPA_NAPA_min": "Bidur", "Long": 85.171365, "Lat": 27.96187 }, "geometry": { "type": "Point", "coordinates": [ 85.1713652, 27.9618698 ] } },
+{ "type": "Feature", "properties": { "osm_id": null, "amenity": null, "Final_Name": "Gosaikunda English Reading School", "GAPA_NAPA_min": "Gosaikunda", "Long": 85.338742, "Lat": 28.1642 }, "geometry": { "type": "Point", "coordinates": [ 85.338741563675072, 28.164200267471696 ] } },
+{ "type": "Feature", "properties": { "osm_id": null, "amenity": null, "Final_Name": "Shree Sankhadevi Secondary School", "GAPA_NAPA_min": "Benighat Rorang", "Long": 84.705114, "Lat": 27.806086 }, "geometry": { "type": "Point", "coordinates": [ 84.705113545060158, 27.806086181166421 ] } }
+]
+}

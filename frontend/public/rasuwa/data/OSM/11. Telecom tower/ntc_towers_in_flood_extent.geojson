@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "ntc_towers_in_flood_extent",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Site ID": "CDR1065", "Site Name": "CDR1065_CHILIME KHOLA_3G", "District": "RASUWA", "Latitude": 28.18094, "Longitude": 85.3418 }, "geometry": { "type": "Point", "coordinates": [ 85.3418, 28.18094 ] } },
+{ "type": "Feature", "properties": { "Site ID": "CDR957", "Site Name": "CDR957_Trishuli 3B", "District": "NUWAKOT", "Latitude": 27.995951, "Longitude": 85.183459 }, "geometry": { "type": "Point", "coordinates": [ 85.183459, 27.995951 ] } }
+]
+}

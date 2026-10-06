@@ -1,0 +1,335 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.14925,
+          27.89927
+        ]
+      },
+      "properties": {
+        "Site": "Battar kabad hall",
+        "Location": "Nuwakot-Bidur",
+        "Coordinate": "27.8992727,85.1492530"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.14584,
+          27.89857
+        ]
+      },
+      "properties": {
+        "Site": "Nuwakot adarsha bahumukhi",
+        "Location": null,
+        "Coordinate": "27.89856871,85.14584275"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.14199,
+          27.8794
+        ]
+      },
+      "properties": {
+        "Site": "Chuwadi Mavi Majhitar",
+        "Location": null,
+        "Coordinate": "27.8793991,85.1419929"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.15044,
+          27.94463
+        ]
+      },
+      "properties": {
+        "Site": "Trishul Adharbhut Bidhyalaya",
+        "Location": null,
+        "Coordinate": "27.9446345,85.1504437"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.1343,
+          27.90469
+        ]
+      },
+      "properties": {
+        "Site": "Mahendra Mavi",
+        "Location": null,
+        "Coordinate": "27.9046927,85.1342963"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.14764,
+          27.9009
+        ]
+      },
+      "properties": {
+        "Site": "Children Park",
+        "Location": null,
+        "Coordinate": "27.9008977,85.1476440"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.17427,
+          27.98831
+        ]
+      },
+      "properties": {
+        "Site": "Karki Manakamana Mavi",
+        "Location": "Betrawati Bajar",
+        "Coordinate": "27.98831009,85.17426992"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.19302,
+          27.98423
+        ]
+      },
+      "properties": {
+        "Site": "Uttargaya ward 5 karyalaaya, Majhgaun",
+        "Location": null,
+        "Coordinate": "27.98422871,85.19302071"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.17849,
+          28.01799
+        ]
+      },
+      "properties": {
+        "Site": "Tribhuvan Mabi",
+        "Location": "Archale",
+        "Coordinate": "28.01798993,85.17848515"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.18899,
+          28.00924
+        ]
+      },
+      "properties": {
+        "Site": "Shree Malika Mabi",
+        "Location": null,
+        "Coordinate": "28.00923756,85.18898892"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.1956,
+          28.06117
+        ]
+      },
+      "properties": {
+        "Site": "Panchalinge NiMavi",
+        "Location": "Mailung",
+        "Coordinate": "28.0611682,85.1955972"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.33212,
+          28.16376
+        ]
+      },
+      "properties": {
+        "Site": "Gosaikunda EBS",
+        "Location": "Saprubeshi",
+        "Coordinate": "28.1637583,85.3321219"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.35797,
+          28.17533
+        ]
+      },
+      "properties": {
+        "Site": "Guest House area",
+        "Location": null,
+        "Coordinate": "28.1753337,85.3579742"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.36091,
+          28.17241
+        ]
+      },
+      "properties": {
+        "Site": "Helipad Surka area(nearby)",
+        "Location": null,
+        "Coordinate": "28.1724082,85.3609129"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.27917,
+          28.11701
+        ]
+      },
+      "properties": {
+        "Site": "Shree Hakubensi Basic School",
+        "Location": "Hakubeshi",
+        "Coordinate": "28.1170118,85.2791699"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.28184,
+          28.13135
+        ]
+      },
+      "properties": {
+        "Site": "Parbati Kunda Prathamik Bidhyalaya Nesingh",
+        "Location": null,
+        "Coordinate": "28.1313492,85.2818362"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.00196,
+          27.79778
+        ]
+      },
+      "properties": {
+        "Site": "Namuna Bageshwori Campus",
+        "Location": "Galchhi",
+        "Coordinate": "27.79778048954818, 85.00196218414456"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.98621,
+          27.8015
+        ]
+      },
+      "properties": {
+        "Site": "Namuna Bageshwori Mavi",
+        "Location": null,
+        "Coordinate": "27.801504700045374, 84.98620511230027"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.98734,
+          27.80118
+        ]
+      },
+      "properties": {
+        "Site": "Bageshwori Adharbhut Mavi, Aduwabari",
+        "Location": null,
+        "Coordinate": "27.8011768,84.9873415"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.06014,
+          27.85233
+        ]
+      },
+      "properties": {
+        "Site": "Mahadev Mavi",
+        "Location": "Budasinghaghat",
+        "Coordinate": "27.8523273,85.0601432"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.08723,
+          27.86239
+        ]
+      },
+      "properties": {
+        "Site": "Setidevi Adharbhut Bidhyalaya",
+        "Location": "Kumaltar",
+        "Coordinate": "27.8623887,85.0872257"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.87984748,
+          27.80779795
+        ]
+      },
+      "properties": {
+        "Site": "Adarsha Mavi",
+        "Location": "Gajuri",
+        "Coordinate": "27.80779795152496, 84.87984747817423"
+      }
+    }
+  ]
+}

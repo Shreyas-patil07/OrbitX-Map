@@ -1,0 +1,1108 @@
+{
+  "map": {
+    "title": "Bhotekoshi River Flood - August 2026",
+    "center": [
+      85.5194,
+      28.2968
+    ],
+    "zoom": 13.64,
+    "bounds": [
+      [
+        84.3,
+        27.72
+      ],
+      [
+        85.72,
+        28.36
+      ]
+    ],
+    "fitBoundsOnLoad": false,
+    "pitch": 53.5,
+    "bearing": 122.6,
+    "terrain3d": {
+      "pitch": 53.5,
+      "bearing": 122.6
+    },
+    "tour": [
+      {
+        "label": "Landslide source",
+        "center": [
+          85.5194,
+          28.2968
+        ],
+        "zoom": 13.64,
+        "pitch": 53.5,
+        "bearing": 122.6,
+        "holdMs": 2200
+      },
+      {
+        "label": "Landslide origin and flood path",
+        "zoom": 12.698137295634785,
+        "pitch": 68.50000000000003,
+        "bearing": 108.5999999999997,
+        "center": [
+          85.47213795521424,
+          28.321494780042713
+        ]
+      },
+      {
+        "label": "RasuwaGadi",
+        "zoom": 17,
+        "pitch": 2.999999999999986,
+        "bearing": 32.59999999999969,
+        "center": [
+          85.37937117777915,
+          28.27828970080631
+        ]
+      },
+      {
+        "label": "Downstream from rasuwagadi (zoomed out)",
+        "zoom": 11.483834567896821,
+        "pitch": 58.00000000000001,
+        "bearing": 23,
+        "center": [
+          85.21648406982422,
+          28.099543691790032
+        ],
+        "holdMs": 100
+      },
+      {
+        "label": "Devighat",
+        "zoom": 16.13666222663325,
+        "pitch": 44.500000000000014,
+        "bearing": 33.39999999999998,
+        "center": [
+          85.10878801344052,
+          27.86049113002332
+        ],
+        "holdMs": 100
+      },
+      {
+        "label": "zoomed out view of flood extent",
+        "zoom": 9.279625539186888,
+        "pitch": 43.484969954968584,
+        "bearing": 46.91342694061984,
+        "center": [
+          84.69154357910156,
+          27.806283691459726
+        ]
+      },
+      {
+        "label": "Full corridor, source to plains",
+        "center": [
+          85.35,
+          27.93
+        ],
+        "zoom": 7.3,
+        "pitch": 60,
+        "bearing": 9,
+        "flyMs": 6000,
+        "holdMs": 1800,
+        "showLayers": [
+          "exposed_settlements",
+          "road_damaged",
+          "waterways",
+          "road_damaged"
+        ]
+      },
+      {
+        "label": "Rasuwagadhi valley overview",
+        "center": [
+          85.2,
+          27.998
+        ],
+        "zoom": 10.05,
+        "pitch": 58,
+        "bearing": 23,
+        "flyMs": 5500,
+        "holdMs": 0
+      }
+    ],
+    "icons": {
+      "bridge": "map_icons/bridge.svg",
+      "education": "map_icons/education.svg",
+      "health": "map_icons/health.svg",
+      "video_play": "map_icons/video-play.svg",
+      "hazard_pin": "map_icons/hazard-pin.svg",
+      "glacier_pin": "map_icons/glacier-pin.svg",
+      "hydropower": {
+        "url": "map_icons/hydropower.svg",
+        "sdf": true
+      },
+      "bank": {
+        "url": "map_icons/bank.svg",
+        "sdf": true
+      },
+      "police": {
+        "url": "map_icons/police.svg",
+        "sdf": true
+      },
+      "helipad": {
+        "url": "map_icons/helipad.svg",
+        "sdf": true
+      },
+      "waterway": {
+        "url": "map_icons/waterway.svg",
+        "sdf": true
+      },
+      "telecom_tower": {
+        "url": "map_icons/telecom-tower.svg",
+        "sdf": true
+      },
+      "voting_booth": {
+        "url": "map_icons/voting-booth.svg",
+        "sdf": true
+      },
+      "open_space": {
+        "url": "map_icons/open-space.svg",
+        "sdf": true
+      },
+      "temp_settlement": {
+        "url": "map_icons/temp-settlement.svg",
+        "sdf": true
+      }
+    },
+    "basemap": {
+      "id": "esri_imagery",
+      "label": "Esri World Imagery",
+      "tiles": [
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+      ],
+      "tileSize": 256,
+      "attribution": "Esri, Maxar, Earthstar Geographics"
+    },
+    "terrain": {
+      "tiles": [
+        "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
+      ],
+      "encoding": "terrarium",
+      "tileSize": 256,
+      "maxzoom": 15,
+      "attribution": "AWS Terrain Tiles"
+    },
+    "compare": {
+      "before": "pre_s2_true_color",
+      "after": "post_imagery_s2",
+      "layers": [
+        "river"
+      ]
+    }
+  },
+  "categories": [
+    
+    {
+      "id": "flood",
+      "label": "Flood Extent & River",
+      "layers": [
+        {
+          "id": "flood_extent",
+          "label": "Flood Extent (observed 27 Aug 2026; Community-based mapping)",
+          "type": "fill",
+          "data": "data/flood_extent_v2.geojson",
+          "paint": {
+            "fillColor": "#1f9dd6",
+            "fillOpacity": 0.35,
+            "lineColor": "#0b5b7a",
+            "lineWidth": 1.5
+          },
+          "active": true
+        },
+        {
+          "id": "flood_extent_500m_buffer_outline",
+          "label": "Flood Extent 500m Buffer Outline",
+          "type": "line",
+          "data": "data/OSM/1. Area_of_interest_flooded_area/500m_buffer_flood_extent_extended_31th_August.geojson",
+          "paint": {
+            "lineColor": "#e8871e",
+            "lineWidth": 2,
+            "lineDasharray": [3, 2]
+          },
+          "active": false
+        },
+        {
+          "id": "river_buffer",
+          "label": "Bhotekoshi River 2km Buffer",
+          "type": "line",
+          "data": "data/bhotekoshi_river_2km_buffer.geojson",
+          "paint": {
+            "lineColor": "#e8871e",
+            "lineWidth": 1.5,
+            "lineDasharray": [
+              3,
+              2
+            ]
+          },
+          "active": false
+        },
+        {
+          "id": "river",
+          "label": "Bhotekoshi River",
+          "type": "line",
+          "data": "data/bhotekoshi_river.geojson",
+          "paint": {
+            "lineColor": "#0f5fa6",
+            "lineWidth": 2
+          },
+          "active": true
+        },
+        {
+          "id": "waterways",
+          "label": "Waterways (OSM)",
+          "type": "icon",
+          "icon": "waterway",
+          "iconSize": 0.45,
+          "iconColor": {
+            "field": "status",
+            "values": {
+              "Standing": "#1f9dd6",
+              "Destroyed": "#d62728"
+            },
+            "default": "#888888"
+          },
+          "data": "https://production-raw-data-api.s3.amazonaws.com/ISO3/NPL/waterways/hot_flood_npl_waterways_osm.geojson",
+          "labelField": "name",
+          "popupFields": [
+            "name",
+            "waterway",
+            "status",
+            "width",
+            "depth"
+          ],
+          "polygonPaint": {
+            "fillColor": {
+              "field": "status",
+              "values": {
+                "Standing": "#1f9dd6",
+                "Destroyed": "#d62728"
+              },
+              "default": "#888888"
+            },
+            "fillOpacity": 0.4,
+            "lineWidth": 1
+          },
+          "linePaint": {
+            "lineColor": {
+              "field": "status",
+              "values": {
+                "Standing": "#1f9dd6",
+                "Destroyed": "#d62728"
+              },
+              "default": "#888888"
+            },
+            "lineWidth": 2
+          },
+          "statsField": "waterway",
+          "note": "Colored by status: blue = standing/intact, red = destroyed/washed out.",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "boundaries",
+      "label": "Administrative Boundaries",
+      "layers": [
+        {
+          "id": "gn_affected",
+          "label": "Affected Municipalities (Gaunpalika / Nagarpalika)",
+          "type": "fill",
+          "data": "data/gn_affected.json",
+          "paint": {
+            "fillColor": "#ffffff",
+            "fillOpacity": 0.03,
+            "lineColor": "#ffffff",
+            "lineWidth": 0.2
+          },
+          "labelField": "GaPa_NaPa",
+          "popupFields": [
+            "GaPa_NaPa",
+            "Type_GN",
+            "DISTRICT",
+            "Province"
+          ],
+          "popupLabels": {
+            "GaPa_NaPa": "Municipality",
+            "Type_GN": "Type",
+            "DISTRICT": "District",
+            "Province": "Province"
+          },
+          "popupTrigger": "click",
+          "statsField": "Type_GN",
+          "spotlight": {
+            "color": "#000000",
+            "opacity": 0.55
+          },
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "essential",
+      "label": "Essential Facilities",
+      "layers": [
+        {
+          "id": "buildings",
+          "label": "Buildings near flood zone (Overture)",
+          "type": "fill",
+          "data": "data/buildings_essential.geojson",
+          "paint": {
+            "fillColor": "#212529",
+            "fillOpacity": 0.55,
+            "lineColor": "#1C1A1A",
+            "lineWidth": 0.5
+          },
+          "active": true,
+          "minzoom": 13
+        },
+        {
+          "id": "road_network",
+          "label": "Road Network (OSM)",
+          "type": "line",
+          "data": "data/OSM/4. Road Network/Complete Road.geojson",
+          "paint": {
+            "lineColor": {
+              "field": "highway",
+              "values": {
+                "trunk": "#e63946",
+                "primary": "#f3722c",
+                "secondary": "#f9c74f",
+                "tertiary": "#ffe066",
+                "residential": "#ffffff",
+                "living_street": "#e0e0e0",
+                "unclassified": "#cfd8dc",
+                "service": "#adb5bd",
+                "track": "#8d6e63",
+                "path": "#6d4c41",
+                "footway": "#795548",
+                "pedestrian": "#9c6644"
+              },
+              "default": "#888888"
+            },
+            "lineWidth": 1.5
+          },
+          "labelField": "name",
+          "popupFields": [
+            "name",
+            "highway",
+            "surface",
+            "adm2_name",
+            "adm3_name"
+          ],
+          "popupLabels": {
+            "adm2_name": "District",
+            "adm3_name": "Municipality"
+          },
+          "statsField": "highway",
+          "note": "Colored by road class: red = trunk, orange = primary, yellow = secondary/tertiary, white = residential, gray = unclassified/service, brown = track/path/footway.",
+          "active": false
+        },
+        {
+          "id": "bridges",
+          "label": "Bridges (OSM)",
+          "type": "fill",
+          "data": "data/OSM/12. Bridge/Bridge_Polygon.geojson",
+          "paint": {
+            "fillColor": {
+              "field": "Remarks",
+              "values": {
+                "Suspension Bridge": "#6b4fbb",
+                "RCC Bridge": "#4a90d9",
+                "Water Diversion Bridge": "#2ca02c"
+              },
+              "default": "#888888"
+            },
+            "fillOpacity": 0.65,
+            "lineColor": "#222222",
+            "lineWidth": 1
+          },
+          "popupFields": [
+            "Remarks",
+            "Width"
+          ],
+          "popupLabels": {
+            "Width": "Width (m)"
+          },
+          "statsField": "Remarks",
+          "note": "Colored by bridge type: purple = suspension, blue = RCC, green = water diversion.",
+          "active": false
+        },
+        {
+          "id": "education",
+          "label": "Educational Institutes, 500m Buffer (OSM)",
+          "type": "icon",
+          "icon": "education",
+          "iconSize": 0.45,
+          "data": "data/OSM/5. Educational Facilities/Education_AOI_500m_Sep_1.geojson",
+          "labelField": "Final_Name",
+          "popupFields": [
+            "Final_Name",
+            "amenity",
+            "GAPA_NAPA_min"
+          ],
+          "popupLabels": {
+            "amenity": "Type",
+            "GAPA_NAPA_min": "Municipality"
+          },
+          "statsField": "GAPA_NAPA_min",
+          "active": false
+        },
+        {
+          "id": "health",
+          "label": "Health Facilities, 500m Buffer (OSM)",
+          "type": "icon",
+          "icon": "health",
+          "iconSize": 0.45,
+          "data": "data/OSM/6. Health Facilities/Health_500m_Sep_1.geojson",
+          "labelField": "title",
+          "popupFields": [
+            "title",
+            "ownership",
+            "operationa",
+            "serviceTyp",
+            "localAddre",
+            "phoneNumbe",
+            "ward"
+          ],
+          "popupLabels": {
+            "title": "Name",
+            "ownership": "Ownership",
+            "operationa": "Operational Status",
+            "serviceTyp": "Service Type",
+            "localAddre": "Local Address",
+            "phoneNumbe": "Phone",
+            "ward": "Ward"
+          },
+          "statsField": "ownership",
+          "active": false
+        },
+        {
+          "id": "financial_services",
+          "label": "Financial Services (OSM)",
+          "type": "icon",
+          "icon": "bank",
+          "iconSize": 0.45,
+          "iconColor": {
+            "field": "status",
+            "values": {
+              "Standing": "#2ca02c",
+              "Destroyed": "#d62728"
+            },
+            "default": "#888888"
+          },
+          "data": "https://production-raw-data-api.s3.amazonaws.com/ISO3/NPL/financial_services/hot_flood_npl_financial_services_osm.geojson",
+          "labelField": "name",
+          "popupFields": [
+            "name",
+            "amenity",
+            "status",
+            "operator",
+            "addr_full"
+          ],
+          "popupLabels": {
+            "amenity": "Type",
+            "addr_full": "Address"
+          },
+          "statsField": "amenity",
+          "note": "Colored by status: green = standing, red = destroyed.",
+          "active": false
+        },
+        {
+          "id": "police_stations",
+          "label": "Police Stations (OSM)",
+          "type": "icon",
+          "icon": "police",
+          "iconSize": 0.45,
+          "iconColor": {
+            "field": "status",
+            "values": {
+              "Standing": "#2ca02c",
+              "Destroyed": "#d62728"
+            },
+            "default": "#888888"
+          },
+          "data": "https://production-raw-data-api.s3.amazonaws.com/ISO3/NPL/police_stations/hot_flood_npl_police_stations_osm.geojson",
+          "labelField": "name",
+          "popupFields": [
+            "name",
+            "status",
+            "operator",
+            "phone",
+            "addr_full"
+          ],
+          "popupLabels": {
+            "addr_full": "Address"
+          },
+          "polygonPaint": {
+            "fillColor": {
+              "field": "status",
+              "values": {
+                "Standing": "#2ca02c",
+                "Destroyed": "#d62728"
+              },
+              "default": "#888888"
+            },
+            "fillOpacity": 0.45,
+            "lineWidth": 1.5
+          },
+          "statsField": "status",
+          "note": "Colored by status: green = standing, red = destroyed.",
+          "active": false
+        },
+        {
+          "id": "helipads",
+          "label": "Helipads (OSM)",
+          "type": "icon",
+          "icon": "helipad",
+          "iconSize": 0.45,
+          "iconColor": "#2ca02c",
+          "data": "data/OSM/7. Helipads/Helipad.geojson",
+          "labelField": "Name",
+          "popupFields": [
+            "Name",
+            "GaPa_NaP_1",
+            "Type_GN",
+            "DISTRICT"
+          ],
+          "popupLabels": {
+            "GaPa_NaP_1": "Municipality",
+            "Type_GN": "Type",
+            "DISTRICT": "District"
+          },
+          "statsField": "DISTRICT",
+          "active": false
+        },
+        {
+          "id": "ntc_towers",
+          "label": "NTC Telecom Towers (OSM)",
+          "type": "icon",
+          "icon": "telecom_tower",
+          "iconSize": 0.45,
+          "iconColor": "#4a90d9",
+          "data": "data/OSM/11. Telecom tower/NTC_Towers.geojson",
+          "labelField": "Site Name",
+          "popupFields": [
+            "Site Name",
+            "Site ID",
+            "District"
+          ],
+          "statsField": "District",
+          "active": false
+        },
+        {
+          "id": "temp_settlements",
+          "label": "Temporary Settlement Sites (OSM)",
+          "type": "icon",
+          "icon": "temp_settlement",
+          "iconSize": 0.45,
+          "iconColor": "#e8871e",
+          "data": "data/OSM/20. Temporary Settlements_/probable_sites.geojson",
+          "labelField": "Site",
+          "popupFields": [
+            "Site",
+            "Location"
+          ],
+          "active": false
+        },
+        {
+          "id": "voting_booths",
+          "label": "Voting Booths, 100m Buffer (OSM)",
+          "type": "icon",
+          "icon": "voting_booth",
+          "iconSize": 0.45,
+          "iconColor": "#6b4fbb",
+          "data": "data/OSM/21. Voting booth/voting_booths_buffer100m.geojson",
+          "labelField": "booth_name",
+          "popupFields": [
+            "booth_name",
+            "municipality",
+            "ward_no",
+            "district"
+          ],
+          "popupLabels": {
+            "municipality": "Municipality",
+            "ward_no": "Ward No.",
+            "district": "District"
+          },
+          "statsField": "municipality",
+          "active": false
+        },
+        {
+          "id": "flood_lulc",
+          "label": "Flood-Affected Land Use / Land Cover (OSM)",
+          "type": "fill",
+          "data": "data/OSM/22. Flood_LULC_Area in Ha/Flood_LULC_Dissolve.geojson",
+          "paint": {
+            "fillColor": {
+              "field": "LEVEL1",
+              "values": {
+                "AGR": "#cddc39",
+                "COM": "#e63946",
+                "CULARCH": "#9d4edd",
+                "FOR": "#2d6a4f",
+                "HYD": "#219ebc",
+                "IND": "#6c757d",
+                "MIN": "#8d5524",
+                "OTH": "#adb5bd",
+                "PUB": "#ffb703",
+                "RES": "#fb8500"
+              },
+              "default": "#888888"
+            },
+            "fillOpacity": 0.5,
+            "lineColor": "#333333",
+            "lineWidth": 0.5
+          },
+          "popupFields": [
+            "LEVEL1",
+            "Area"
+          ],
+          "popupLabels": {
+            "LEVEL1": "Land Use / Cover",
+            "Area": "Area (ha)"
+          },
+          "statsField": "LEVEL1",
+          "note": "Land use/cover within the flood extent: green = forest, blue = water/hydro, orange/red = residential/commercial, lime = agriculture, gray = industrial/other, brown = mining, purple = cultural/archaeological, amber = public.",
+          "active": false
+        }
+      ]
+    },
+    {
+      "id": "damage",
+      "label": "Damage Assessment",
+      "layers": [
+        {
+          "id": "bridge_damage",
+          "label": "Bridge Damage Assessment",
+          "type": "circle",
+          "data": "https://production-raw-data-api.s3.amazonaws.com/ISO3/NPL/combined/hot_flood_npl_bridge_damage.geojson",
+          "paint": {
+            "circleColor": {
+              "field": "status",
+              "values": {
+                "Washed out": "#d62728",
+                "Damaged": "#ff9f1c",
+                "Intact": "#2ca02c"
+              },
+              "default": "#888888"
+            },
+            "circleRadius": 7,
+            "circleStrokeColor": "#ffffff",
+            "circleStrokeWidth": 1.5
+          },
+          "labelField": "name",
+          "popupFields": [
+            "name",
+            "status",
+            "location"
+          ],
+          "note": "Colored by status: red = washed out, orange = damaged, green = intact.",
+          "active": false
+        },
+        {
+          "id": "exposed_hydropowers",
+          "label": "Hydropower Damage Assessment (OSM)",
+          "type": "fill",
+          "data": "data/OSM/13. Hydropower/Hydropower_ar_29Aug.geojson",
+          "paint": {
+            "fillColor": {
+              "field": "Damage_Sta",
+              "values": {
+                "Fully damaged": "#d62728",
+                "Partially damaged": "#ff9f1c",
+                "Not damaged": "#2ca02c"
+              },
+              "default": "#888888"
+            },
+            "fillOpacity": 0.65,
+            "lineColor": "#7a1414",
+            "lineWidth": 1
+          },
+          "labelField": "Name",
+          "popupFields": [
+            "Name",
+            "Damage_Sta"
+          ],
+          "popupLabels": {
+            "Damage_Sta": "Damage Status"
+          },
+          "statsField": "Damage_Sta",
+          "note": "Colored by damage status: red = fully damaged, orange = partially damaged, green = not damaged.",
+          "active": false
+        },
+        {
+          "id": "road_damaged",
+          "label": "Damaged Road Network (OSM)",
+          "type": "line",
+          "data": "data/OSM/4. Road Network/Road_damaged.geojson",
+          "paint": {
+            "lineColor": "#d62728",
+            "lineWidth": 2
+          },
+          "labelField": "name",
+          "popupFields": [
+            "name",
+            "highway",
+            "length_km",
+            "adm2_name",
+            "adm3_name"
+          ],
+          "popupLabels": {
+            "length_km": "Length (km)",
+            "adm2_name": "District",
+            "adm3_name": "Municipality"
+          },
+          "statsField": "highway",
+          "active": true
+        },
+        {
+          "id": "road_endangered",
+          "label": "Endangered Road Network (OSM)",
+          "type": "line",
+          "data": "data/OSM/4. Road Network/Road_endangered.geojson",
+          "paint": {
+            "lineColor": "#ff9f1c",
+            "lineWidth": 2,
+            "lineDasharray": [
+              3,
+              2
+            ]
+          },
+          "labelField": "name",
+          "popupFields": [
+            "name",
+            "highway",
+            "length_km",
+            "adm2_name",
+            "adm3_name"
+          ],
+          "popupLabels": {
+            "length_km": "Length (km)",
+            "adm2_name": "District",
+            "adm3_name": "Municipality"
+          },
+          "statsField": "highway",
+          "note": "Orange dashed = road segments at risk within the flood-affected corridor.",
+          "active": false
+        },
+        {
+          "id": "education_damage",
+          "label": "Education Facilities within Flood Extent (OSM)",
+          "type": "icon",
+          "icon": "education",
+          "iconSize": 0.45,
+          "iconColor": "#d62728",
+          "data": "data/OSM/5. Educational Facilities/Education_AOI_within_Flood_Extent.geojson",
+          "labelField": "Final_Name",
+          "popupFields": [
+            "Final_Name",
+            "amenity",
+            "GAPA_NAPA_min"
+          ],
+          "popupLabels": {
+            "amenity": "Type",
+            "GAPA_NAPA_min": "Municipality"
+          },
+          "statsField": "GAPA_NAPA_min",
+          "active": false
+        },
+        {
+          "id": "health_damage",
+          "label": "Health Facilities within Flood Extent (OSM)",
+          "type": "icon",
+          "icon": "health",
+          "iconSize": 0.45,
+          "iconColor": "#d62728",
+          "data": "data/OSM/6. Health Facilities/Helath_within_FloodExtent_1Sept.geojson",
+          "labelField": "title",
+          "popupFields": [
+            "title",
+            "ownership",
+            "operationa",
+            "serviceTyp",
+            "localAddre",
+            "phoneNumbe",
+            "ward"
+          ],
+          "popupLabels": {
+            "title": "Name",
+            "ownership": "Ownership",
+            "operationa": "Operational Status",
+            "serviceTyp": "Service Type",
+            "localAddre": "Local Address",
+            "phoneNumbe": "Phone",
+            "ward": "Ward"
+          },
+          "statsField": "ownership",
+          "active": false
+        },
+        {
+          "id": "ntc_towers_damage",
+          "label": "NTC Telecom Towers within Flood Extent (OSM)",
+          "type": "icon",
+          "icon": "telecom_tower",
+          "iconSize": 0.5,
+          "iconColor": "#d62728",
+          "data": "data/OSM/11. Telecom tower/ntc_towers_in_flood_extent.geojson",
+          "labelField": "Site Name",
+          "popupFields": [
+            "Site Name",
+            "Site ID",
+            "District"
+          ],
+          "statsField": "District",
+          "active": false
+        },
+        {
+          "id": "impacted_banks",
+          "label": "Impacted Banking Facilities (OSM)",
+          "type": "icon",
+          "icon": "bank",
+          "iconSize": 0.45,
+          "iconColor": "#d62728",
+          "data": "data/OSM/18. Banking Facilities/Impacted Bank.geojson",
+          "labelField": "Name",
+          "popupFields": [
+            "Name",
+            "District",
+            "Municipali"
+          ],
+          "popupLabels": {
+            "Municipali": "Municipality"
+          },
+          "statsField": "District",
+          "active": false
+        },
+        {
+          "id": "exposed_settlements",
+          "label": "Exposed Settlements (OSM)",
+          "type": "fill",
+          "data": "data/OSM/19. Settlements/final_settelement_with_updated_v2.geojson",
+          "paint": {
+            "fillColor": "#d62728",
+            "fillOpacity": 0.45,
+            "lineColor": "#7a1414",
+            "lineWidth": 0.75
+          },
+          "labelField": "Name",
+          "popupFields": [
+            "Name",
+            "Bu_count",
+            "DISTRICT",
+            "GaPa_NaPa"
+          ],
+          "popupLabels": {
+            "Bu_count": "Building Count",
+            "GaPa_NaPa": "Municipality"
+          },
+          "statsField": "GaPa_NaPa",
+          "active": true
+        },
+        {
+          "id": "solar_power_plants",
+          "label": "Solar Power Plants within Flood Corridor (OSM)",
+          "type": "fill",
+          "data": "data/OSM/23. Solar Power Plants/Solar_Power_Plants.geojson",
+          "paint": {
+            "fillColor": "#f4a300",
+            "fillOpacity": 0.55,
+            "lineColor": "#8a5a00",
+            "lineWidth": 1
+          },
+          "note": "Solar power plant footprints exposed to the flood-affected river corridor (OSM).",
+          "active": false
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "label": "Other",
+      "layers": [
+        {
+          "id": "key_locations",
+          "label": "Key Locations (flood origin, glacier)",
+          "type": "icon",
+          "iconField": "icon",
+          "iconSize": 0.6,
+          "data": "data/key_locations_v2.geojson",
+          "labelField": "name",
+          "alwaysLabel": true,
+          "autoPopupOnHighlight": true,
+          "polygonPaint": {
+            "fillColor": {
+              "field": "kind",
+              "values": {
+                "hazard": "#ffd400",
+                "lake": "#1e88e5"
+              },
+              "default": "#ff5a36"
+            },
+            "fillOpacity": 0.6,
+            "lineColor": {
+              "field": "kind",
+              "values": {
+                "hazard": "#a87b00",
+                "lake": "#0d47a1"
+              },
+              "default": "#a8331d"
+            },
+            "lineWidth": 2.5
+          },
+          "active": true
+        },
+        {
+          "id": "cities",
+          "label": "Major Settlements",
+          "type": "circle",
+          "data": "data/cities.geojson",
+          "paint": {
+            "circleColor": "#ffffff",
+            "circleRadius": 5,
+            "circleStrokeColor": "#333333",
+            "circleStrokeWidth": 1.5
+          },
+          "labelField": "name",
+          "statsField": "region",
+          "autoPopupOnHighlight": true,
+          "active": true
+        },
+        {
+          "id": "landslide_hazard",
+          "label": "Landslides (BGS)",
+          "type": "fill",
+          "data": "data/landslides.geojson",
+          "popupFields": [
+            "timing",
+            "source",
+            "year"
+          ],
+          "paint": {
+            "fillColor": "#ffd400",
+            "fillOpacity": 0.6,
+            "lineColor": "#a87b00",
+            "lineWidth": 1.5
+          },
+          "active": true
+        },
+        {
+          "id": "open_space",
+          "label": "Open Space / Evacuation Ground (OSM)",
+          "type": "icon",
+          "icon": "open_space",
+          "iconSize": 0.45,
+          "iconColor": "#2ca02c",
+          "data": "data/OSM/8. Open space/Open Spaces.geojson",
+          "note": "",
+          "active": false
+        }
+      ]
+    },
+     {
+      "id": "imagery",
+      "label": "Imagery (Pre / Post)",
+      "layers": [
+        {
+          "id": "post_imagery",
+          "label": "Post-Disaster Imagery (Vantor, 28 Aug 2026)",
+          "type": "raster",
+          "tiles": [
+            "https://titiler.hotosm.org/cog/tiles/WebMercatorQuad/{z}/{x}/{y}@1x?url=https%3A%2F%2Fproduction-raw-data-api.s3.amazonaws.com%2FISO3%2FNPL%2Fdisasters%2Fnepal-flood%2F2026-08-28%2Fvantor_composite_v3.tif"
+          ],
+          "tileSize": 256,
+          "attribution": "Vantor / HOTOSM raw-data-api",
+          "active": false,
+          "period": "post"
+        },
+        {
+          "id": "post_imagery_s2",
+          "label": "Post-Disaster Sentinel-2 True Color (21 Sep 2026)",
+          "type": "raster",
+          "period": "post",
+          "tiles": [
+            "https://sh.dataspace.copernicus.eu/ogc/wms/28c396b5-9a64-47df-b08a-ec0178ca4a5c?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=1_TRUE_COLOR&CRS=EPSG:3857&BBOX={bbox-epsg-3857}&WIDTH=512&HEIGHT=512&FORMAT=image/jpeg&TIME=2026-09-21/2026-09-21&MAXCC=100&SHOWLOGO=false"
+          ],
+          "tileSize": 512,
+          "maxzoom": 14,
+          "attribution": "Contains modified Copernicus Sentinel data 2026 / Copernicus Data Space Ecosystem",
+          "active": false
+        },
+        {
+          "id": "post_s2_false_color",
+          "label": "Post-Disaster Sentinel-2 False Color (21 Sep 2026)",
+          "type": "raster",
+          "period": "post",
+          "tiles": [
+            "https://sh.dataspace.copernicus.eu/ogc/wms/28c396b5-9a64-47df-b08a-ec0178ca4a5c?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=2_FALSE_COLOR&CRS=EPSG:3857&BBOX={bbox-epsg-3857}&WIDTH=512&HEIGHT=512&FORMAT=image/jpeg&TIME=2026-09-21/2026-09-21&MAXCC=100&SHOWLOGO=false"
+          ],
+          "tileSize": 512,
+          "maxzoom": 14,
+          "attribution": "Contains modified Copernicus Sentinel data 2026 / Copernicus Data Space Ecosystem",
+          "active": false
+        },
+        {
+          "id": "post_s2_ndvi",
+          "label": "Post-Disaster Sentinel-2 NDVI (21 Sep 2026)",
+          "type": "raster",
+          "period": "post",
+          "tiles": [
+            "https://sh.dataspace.copernicus.eu/ogc/wms/28c396b5-9a64-47df-b08a-ec0178ca4a5c?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=3_NDVI&CRS=EPSG:3857&BBOX={bbox-epsg-3857}&WIDTH=512&HEIGHT=512&FORMAT=image/jpeg&TIME=2026-09-21/2026-09-21&MAXCC=100&SHOWLOGO=false"
+          ],
+          "tileSize": 512,
+          "maxzoom": 14,
+          "attribution": "Contains modified Copernicus Sentinel data 2026 / Copernicus Data Space Ecosystem",
+          "active": false
+        },
+        {
+          "id": "pre_s2_true_color",
+          "label": "Pre-Disaster Sentinel-2 True Color (12 Aug 2026)",
+          "type": "raster",
+          "period": "pre",
+          "tiles": [
+            "https://sh.dataspace.copernicus.eu/ogc/wms/28c396b5-9a64-47df-b08a-ec0178ca4a5c?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=1_TRUE_COLOR&CRS=EPSG:3857&BBOX={bbox-epsg-3857}&WIDTH=512&HEIGHT=512&FORMAT=image/jpeg&TIME=2026-08-12/2026-08-12&MAXCC=100&SHOWLOGO=false"
+          ],
+          "tileSize": 512,
+          "maxzoom": 14,
+          "attribution": "Contains modified Copernicus Sentinel data 2026 / Copernicus Data Space Ecosystem",
+          "active": false
+        },
+        {
+          "id": "pre_s2_false_color",
+          "label": "Pre-Disaster Sentinel-2 False Color (12 Aug 2026)",
+          "type": "raster",
+          "period": "pre",
+          "tiles": [
+            "https://sh.dataspace.copernicus.eu/ogc/wms/28c396b5-9a64-47df-b08a-ec0178ca4a5c?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=2_FALSE_COLOR&CRS=EPSG:3857&BBOX={bbox-epsg-3857}&WIDTH=512&HEIGHT=512&FORMAT=image/jpeg&TIME=2026-08-12/2026-08-12&MAXCC=100&SHOWLOGO=false"
+          ],
+          "tileSize": 512,
+          "maxzoom": 14,
+          "attribution": "Contains modified Copernicus Sentinel data 2026 / Copernicus Data Space Ecosystem",
+          "active": false
+        },
+        {
+          "id": "pre_s2_ndvi",
+          "label": "Pre-Disaster Sentinel-2 NDVI (12 Aug 2026)",
+          "type": "raster",
+          "period": "pre",
+          "tiles": [
+            "https://sh.dataspace.copernicus.eu/ogc/wms/28c396b5-9a64-47df-b08a-ec0178ca4a5c?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=3_NDVI&CRS=EPSG:3857&BBOX={bbox-epsg-3857}&WIDTH=512&HEIGHT=512&FORMAT=image/jpeg&TIME=2026-08-12/2026-08-12&MAXCC=100&SHOWLOGO=false"
+          ],
+          "tileSize": 512,
+          "maxzoom": 14,
+          "attribution": "Contains modified Copernicus Sentinel data 2026 / Copernicus Data Space Ecosystem",
+          "active": false
+        },
+        {
+          "id": "pre_imagery",
+          "label": "Pre-Disaster Reference (Sentinel-2 cloud-free mosaic)",
+          "type": "raster",
+          "tiles": [
+            "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2020_3857/default/g/{z}/{y}/{x}.jpg"
+          ],
+          "tileSize": 256,
+          "attribution": "Sentinel-2 cloudless by EOX IT Services GmbH",
+          "note": "General cloud-free baseline mosaic, not a same-date pre-event snapshot.",
+          "active": false,
+          "period": "pre"
+        }
+      ]
+    }
+  ]
+}

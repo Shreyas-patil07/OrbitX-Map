@@ -1,0 +1,389 @@
+#topbar h1 { all: revert; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+#topbar {
+  height: 52px;
+  background: #14202b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  position: relative;
+  z-index: 20;
+}
+#topbar h1 { font-size: 16px; margin: 0; font-weight: 600; flex-shrink: 0; }
+#topbar h1 span { font-weight: 400; color: #9db4c4; font-size: 13px; }
+#topbar-buttons { display: flex; align-items: center; gap: 8px; flex-shrink: 0; min-width: 0; position: relative; }
+#topbar-more-menu { display: flex; gap: 8px; }
+
+/* the layers toggle is the only way to reach the sidebar once it's hidden
+   (collapsed by default on mobile, or auto-hidden during the tour) — keep it
+   outside the collapsible "more" menu so it's always visible, and give it an
+   "active" look while its panel is open so it reads as a toggle, not a label. */
+.toolbtn-pinned { flex-shrink: 0; }
+.toolbtn-pinned.active { background: #1f9dd6; border-color: #1f9dd6; }
+
+/* the "⋯" overflow-menu trigger only exists for the mobile layout below;
+   on wider screens all the tools it would hold are already shown inline. */
+.toolbtn-more { display: none; }
+
+.toolbtn {
+  background: #24384a;
+  color: #fff;
+  border: 1px solid #395067;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.toolbtn:hover { background: #2f4b63; }
+.toolbtn.active { background: #1f9dd6; border-color: #1f9dd6; }
+.toolbtn:disabled { opacity: 0.5; cursor: default; }
+.toolbtn:disabled:hover { background: #24384a; }
+
+#app { display: flex; height: calc(100% - 52px); }
+
+#sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  background: #f7f8fa;
+  border-right: 1px solid #dfe3e7;
+  overflow-y: auto;
+  transition: margin-left 0.2s ease;
+}
+#sidebar.collapsed { margin-left: -300px; }
+#sidebar-inner { padding: 14px; }
+
+.sidebar-hint { font-size: 12px; color: #667; margin: 0 0 10px; }
+.sidebar-credit { font-size: 10.5px; color: #8a94a0; line-height: 1.4; margin-top: 18px; }
+
+.layer-category { margin-bottom: 14px; }
+.layer-category h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #333;
+  margin: 0 0 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #dfe3e7;
+}
+.layer-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 13px;
+  color: #222;
+}
+.layer-row input { flex-shrink: 0; cursor: pointer; }
+.layer-row label { cursor: pointer; flex: 1; }
+.layer-row-disabled { opacity: 0.45; }
+.layer-row-disabled input,
+.layer-row-disabled label { cursor: default; }
+.layer-row .swatch {
+  width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; border: 1px solid rgba(0,0,0,0.25);
+}
+.layer-note { font-size: 11px; color: #999; margin: 0 0 0 22px; }
+
+#map-area { flex: 1; position: relative; }
+#map { position: absolute; inset: 0; }
+
+#compare-container { position: absolute; inset: 0; }
+#compare-container.hidden { display: none; }
+.compare-map { position: absolute; inset: 0; }
+
+.compare-label {
+  position: absolute;
+  top: 10px;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  z-index: 5;
+  pointer-events: none;
+}
+.compare-label-left { left: 10px; }
+.compare-label-right { right: 10px; }
+.compare-label select {
+  pointer-events: auto; /* the label itself lets clicks through to the map; the dropdown must not */
+  max-width: min(320px, 42vw);
+  background: transparent;
+  color: #fff;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+.compare-label select option,
+.compare-label select optgroup { background: #222; color: #fff; }
+
+#btn-skip-intro {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 8;
+  background: rgba(20, 32, 43, 0.82);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+  animation: ep-fade-in 0.4s ease;
+}
+#btn-skip-intro:hover { background: rgba(31, 157, 214, 0.9); }
+#btn-skip-intro.hidden { display: none; }
+
+@keyframes ep-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.maplibregl-popup-content { font-size: 13px; }
+.video-popup-title { font-weight: 600; margin-bottom: 6px; font-size: 13px; }
+.video-popup-note { font-size: 11px; color: #888; margin-top: 4px; }
+
+.callout-popup .maplibregl-popup-content {
+  border: 2px solid #d62728;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+.callout-popup .maplibregl-popup-tip { border-top-color: #d62728; }
+.callout-title { font-weight: 700; font-size: 12.5px; color: #222; }
+.callout-note { font-size: 11px; color: #666; margin-top: 4px; line-height: 1.35; }
+
+.popup-kv { border-collapse: collapse; }
+.popup-kv td { padding: 2px 0; vertical-align: top; font-size: 12.5px; }
+.popup-kv-key { color: #667; font-weight: 600; padding-right: 10px; white-space: nowrap; }
+.popup-kv-val { color: #111; }
+
+.stats-btn {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  color: #8892a0;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+  border-radius: 4px;
+}
+.stats-btn:hover { background: #e3e7eb; color: #333; }
+
+#stats-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#stats-modal-overlay.hidden { display: none; }
+.stats-modal {
+  background: #fff;
+  border-radius: 10px;
+  width: 380px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 18px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.stats-modal h2 { font-size: 15px; margin: 0 0 4px; color: #14202b; }
+.stats-legend { margin: 10px 0 12px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+.stats-legend-row { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: #333; padding: 2px 0; }
+.stats-legend-icon { width: 18px; height: 18px; flex-shrink: 0; }
+.stats-modal .stats-total { font-size: 12.5px; color: #667; margin-bottom: 14px; }
+.stats-modal .stats-close {
+  float: right;
+  border: none;
+  background: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: #888;
+}
+.stats-bar-row { margin-bottom: 9px; }
+.stats-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 2px;
+}
+.stats-bar-track { background: #eef0f2; border-radius: 4px; height: 10px; overflow: hidden; }
+.stats-bar-fill { height: 100%; border-radius: 4px; }
+.stats-more-note { font-size: 11px; color: #999; margin-top: 6px; }
+
+/* ---------- Elevation profile panel (bottom-docked, synced with the map) ---------- */
+
+#elevation-panel.hidden { display: none; }
+
+.elevation-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 400px;
+  background: #fcfcfb;
+  border-top: 1px solid #dfe3e7;
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.18);
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.ep-resize-handle {
+  height: 10px;
+  flex-shrink: 0;
+  cursor: ns-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+}
+.ep-resize-handle span {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: #d6d4cb;
+  transition: background 0.15s;
+}
+.ep-resize-handle:hover span,
+.ep-resize-handle.ep-resizing span { background: #b3b0a3; }
+
+.ep-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 10px 16px 6px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e1e0d9;
+}
+.ep-titles h2 { margin: 0; font-size: 15px; font-weight: 700; color: #0b0b0b; }
+.ep-subtitle { margin: 2px 0 0; font-size: 11.5px; color: #52514e; }
+
+.ep-stats { display: flex; gap: 18px; margin-left: auto; }
+.ep-stat { text-align: left; }
+.ep-stat-value { font-size: 15px; font-weight: 700; color: #0b0b0b; line-height: 1.2; }
+.ep-stat-value.ep-live { color: #d03b3b; }
+.ep-stat-label { font-size: 9.5px; color: #898781; text-transform: uppercase; letter-spacing: 0.03em; }
+
+.ep-controls { display: flex; align-items: center; gap: 6px; }
+.ep-btn {
+  background: #24384a;
+  color: #fff;
+  border: 1px solid #395067;
+  padding: 5px 11px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.ep-btn:hover { background: #2f4b63; }
+.ep-btn.ep-playing { background: #d03b3b; border-color: #d03b3b; }
+.ep-close {
+  background: transparent;
+  color: #898781;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  padding: 2px 6px;
+}
+.ep-close:hover { color: #0b0b0b; background: #eceae4; border-radius: 6px; }
+
+.ep-chart-wrap { position: relative; flex: 1; min-height: 0; }
+.ep-svg { width: 100%; height: 100%; display: block; cursor: crosshair; }
+
+.ep-city-dot { cursor: pointer; }
+.ep-city-label { font-size: 10.5px; font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; pointer-events: none; }
+
+.ep-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: #0b0b0b;
+  color: #fff;
+  font-size: 11.5px;
+  padding: 6px 9px;
+  border-radius: 6px;
+  transform: translate(-50%, -115%);
+  white-space: nowrap;
+  z-index: 3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.ep-tooltip.hidden { display: none; }
+.ep-tooltip b { color: #ffb4a8; }
+
+.ep-map-marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #d03b3b;
+  border: 2.5px solid #fff;
+  box-shadow: 0 0 0 4px rgba(208, 59, 59, 0.28), 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 720px) {
+  .elevation-panel { height: 300px; }
+  .ep-stats { gap: 10px; margin-left: 0; order: 3; width: 100%; }
+  .ep-header { gap: 8px; }
+}
+
+@media (max-width: 720px) {
+  #sidebar { position: absolute; z-index: 15; height: 100%; box-shadow: 2px 0 8px rgba(0,0,0,0.2); }
+  #sidebar:not(.collapsed) { margin-left: 0; }
+  #sidebar.collapsed { margin-left: -300px; }
+  #sidebar { width: 85vw; max-width: 300px; }
+  #topbar h1 span { display: none; }
+
+  /* the 5 toolbar buttons don't fit in one row at phone widths, and a
+     horizontally-scrolling strip hides everything past the first couple of
+     buttons with no visual hint there's more — easy to miss entirely. Instead,
+     keep only "Layers" (the primary, most-used control) inline, and tuck the
+     other four behind a "⋯ More" button that drops them down as a small menu. */
+  #topbar { padding: 0 10px; gap: 8px; }
+  #topbar h1 {
+    font-size: 13px;
+    max-width: 34vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .toolbtn-more { display: inline-flex; font-size: 18px; padding: 6px 14px; line-height: 1; }
+  #topbar-more-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    background: #1b2b3a;
+    border: 1px solid #395067;
+    border-radius: 10px;
+    padding: 8px;
+    min-width: 220px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+  }
+  #topbar-more-menu.open { display: flex; }
+  #topbar-more-menu .toolbtn {
+    width: 100%;
+    text-align: left;
+    white-space: normal;
+  }
+  .toolbtn {
+    flex-shrink: 0;
+    padding: 6px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 420px) {
+  #topbar h1 { max-width: 22vw; font-size: 12px; }
+}

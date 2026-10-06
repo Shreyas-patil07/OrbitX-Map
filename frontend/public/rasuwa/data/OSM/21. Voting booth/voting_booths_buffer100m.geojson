@@ -1,0 +1,19 @@
+{
+"type": "FeatureCollection",
+"name": "voting_booths_buffer100m",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "booth_id": 8604, "booth_name": "आदर्श उमावि,गजुरी", "state": "बागमती प्रदेश", "district": "धादिङ", "municipality": "गजुरी गाउँपालिका", "ward_no": 1 }, "geometry": { "type": "Point", "coordinates": [ 84.879323, 27.807467 ] } },
+{ "type": "Feature", "properties": { "booth_id": 8597, "booth_name": "वागेश्वरी मा.वि., रिचोकटार", "state": "बागमती प्रदेश", "district": "धादिङ", "municipality": "बेनीघाट रोराङ्ग गाउँपालिका", "ward_no": 3 }, "geometry": { "type": "Point", "coordinates": [ 84.829472, 27.809835 ] } },
+{ "type": "Feature", "properties": { "booth_id": 8602, "booth_name": "५ नं. वडा कार्यालय, वेनिघाट", "state": "बागमती प्रदेश", "district": "धादिङ", "municipality": "बेनीघाट रोराङ्ग गाउँपालिका", "ward_no": 5 }, "geometry": { "type": "Point", "coordinates": [ 84.781062, 27.811853 ] } },
+{ "type": "Feature", "properties": { "booth_id": 8592, "booth_name": "बुद्धिविकास प्रावि,चरौदी", "state": "बागमती प्रदेश", "district": "धादिङ", "municipality": "बेनीघाट रोराङ्ग गाउँपालिका", "ward_no": 7 }, "geometry": { "type": "Point", "coordinates": [ 84.74859, 27.803294 ] } },
+{ "type": "Feature", "properties": { "booth_id": 8590, "booth_name": "शं‌खादेवी मा.वि., मझिमटार", "state": "बागमती प्रदेश", "district": "धादिङ", "municipality": "बेनीघाट रोराङ्ग गाउँपालिका", "ward_no": 9 }, "geometry": { "type": "Point", "coordinates": [ 84.704902, 27.805937 ] } },
+{ "type": "Feature", "properties": { "booth_id": 9264, "booth_name": "त्रित्रि मावि त्रिशुली", "state": "बागमती प्रदेश", "district": "नुवाकोट", "municipality": "विदुर नगरपालिका", "ward_no": 1 }, "geometry": { "type": "Point", "coordinates": [ 85.14999, 27.92355 ] } },
+{ "type": "Feature", "properties": { "booth_id": 10344, "booth_name": "रणभुमेश्वरी मा.वि.", "state": "बागमती प्रदेश", "district": "नुवाकोट", "municipality": "विदुर नगरपालिका", "ward_no": 3 }, "geometry": { "type": "Point", "coordinates": [ 85.10724, 27.86075 ] } },
+{ "type": "Feature", "properties": { "booth_id": 10347, "booth_name": "मान्द्रेढुङ्गा आधारभूत विद्यालय मान्द्रेढुङ्गा", "state": "बागमती प्रदेश", "district": "नुवाकोट", "municipality": "विदुर नगरपालिका", "ward_no": 6 }, "geometry": { "type": "Point", "coordinates": [ 85.13016, 27.88616 ] } },
+{ "type": "Feature", "properties": { "booth_id": 9203, "booth_name": "चण्डेश्वरी मावि", "state": "बागमती प्रदेश", "district": "नुवाकोट", "municipality": "विदुर नगरपालिका", "ward_no": 7 }, "geometry": { "type": "Point", "coordinates": [ 85.16884, 27.96439 ] } },
+{ "type": "Feature", "properties": { "booth_id": 8941, "booth_name": "रामचन्द्र आधारभुत विद्यालय", "state": "बागमती प्रदेश", "district": "नुवाकोट", "municipality": "विदुर नगरपालिका", "ward_no": 10 }, "geometry": { "type": "Point", "coordinates": [ 85.1846, 27.97094 ] } },
+{ "type": "Feature", "properties": { "booth_id": 8119, "booth_name": "श्री नेपाल राष्ट्रिय आ.वि., टिमुरे", "state": "बागमती प्रदेश", "district": "रसुवा", "municipality": "गोसाईकुण्ड गाउँपालिका", "ward_no": 2 }, "geometry": { "type": "Point", "coordinates": [ 85.36623, 28.25322 ] } },
+{ "type": "Feature", "properties": { "booth_id": 9833, "booth_name": "गोसाईकुण्ड गाउँपालिका 5 नं. वडा कार्यालय, स्याफ्रुबेसी", "state": "बागमती प्रदेश", "district": "रसुवा", "municipality": "गोसाईकुण्ड गाउँपालिका", "ward_no": 5 }, "geometry": { "type": "Point", "coordinates": [ 85.34087, 28.16488 ] } }
+]
+}
