@@ -2,10 +2,10 @@
   "map": {
     "title": "Bhotekoshi River Flood - August 2026",
     "center": [
-      85.5194,
-      28.2968
+      85.38,
+      28.27
     ],
-    "zoom": 13.64,
+    "zoom": 10.8,
     "bounds": [
       [
         84.3,
@@ -17,11 +17,11 @@
       ]
     ],
     "fitBoundsOnLoad": false,
-    "pitch": 53.5,
-    "bearing": 122.6,
+    "pitch": 38,
+    "bearing": 38,
     "terrain3d": {
-      "pitch": 53.5,
-      "bearing": 122.6
+      "pitch": 38,
+      "bearing": 38
     },
     "tour": [
       {
@@ -186,10 +186,10 @@
       "layers": [
         "river"
       ]
-    }
+    },
+    "autoPlayTour": false
   },
   "categories": [
-    
     {
       "id": "flood",
       "label": "Flood Extent & River",
@@ -215,7 +215,10 @@
           "paint": {
             "lineColor": "#e8871e",
             "lineWidth": 2,
-            "lineDasharray": [3, 2]
+            "lineDasharray": [
+              3,
+              2
+            ]
           },
           "active": false
         },
@@ -995,7 +998,7 @@
         }
       ]
     },
-     {
+    {
       "id": "imagery",
       "label": "Imagery (Pre / Post)",
       "layers": [
