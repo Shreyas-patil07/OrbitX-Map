@@ -10,7 +10,7 @@ function BackgroundVideo() {
         loop
         playsInline
         preload="auto"
-        src="/bg_video.mp4"
+        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_104303_0c6d60b2-9353-408e-9449-585108a22fb5.mp4"
       />
       <div className="bg-video-overlay" />
       <div className="bg-video-grid" />
