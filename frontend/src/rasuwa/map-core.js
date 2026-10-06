@@ -6,20 +6,12 @@ import { addAllConfiguredLayers } from "./layers.js";
 import { buildSidebar } from "./sidebar.js";
 import { toggleCompare, updateCompareTerrain } from "./compare.js";
 
-// First launch only (per browser tab): play the camera tour defined in
-// config.map.tour — a scripted flyover of waypoints (landslide source, full
-// corridor overview, resting valley view, ...). Cancels itself the instant the
-// user touches the map, and never auto-plays again this session. Once it's
-// played (or been skipped), every subsequent load in the same tab starts
-// straight at the tour's last waypoint — the flyover is an intro flourish, not
-// the resting state. Replayable any time via the topbar "Play Tour" button.
-const INTRO_SEEN_KEY = "bhotekoshi_intro_seen";
-
+// Normal page loads use the configured landing camera. The cinematic tour is
+// deliberately opt-in so the map never finishes a load at a distant waypoint.
 export function createMainMap() {
   const cfg = state.CONFIG.map;
   const tour = cfg.tour;
-  const introSeen = !!sessionStorage.getItem(INTRO_SEEN_KEY);
-  const startView = introSeen && tour && tour.length ? tour[tour.length - 1] : cfg;
+  const startView = cfg;
 
   state.map = new maplibregl.Map({
     container: "map",
@@ -53,12 +45,16 @@ export function createMainMap() {
     // the user, rather than the layer list covering most of the viewport.
     setSidebarCollapsed(window.matchMedia("(max-width: 720px)").matches);
 
-    // ?nointro=1 — dev/testing hook so a specific camera config can be
-    // inspected as a static screenshot without the tour immediately playing.
-    const skipTourParam = new URLSearchParams(location.search).has("nointro");
-    if (!introSeen && tour && tour.length && !skipTourParam) {
-      playTour(tour, { markSeen: true });
+    // The tour is opt-in. Use ?intro=1 for the cinematic flyover without
+    // changing the default landing camera.
+    const introRequested = new URLSearchParams(location.search).has("intro");
+    if ((cfg.autoPlayTour || introRequested) && tour && tour.length) {
+      playTour(tour);
     }
+
+    // Ensure MapLibre recalculates its viewport after the sidebar/layout has
+    // settled, preventing an apparent horizontal/vertical offset on first paint.
+    requestAnimationFrame(() => map.resize());
 
     // Listen for the 'move' event, which fires continuously during panning
   // map.on('move', () => {
@@ -82,9 +78,8 @@ export function replayTour() {
   if (tour && tour.length) playTour(tour, { markSeen: false });
 }
 
-function playTour(tour, { markSeen }) {
+function playTour(tour) {
   const map = state.map;
-  if (markSeen) sessionStorage.setItem(INTRO_SEEN_KEY, "1");
 
   const skipBtn = document.getElementById("btn-skip-intro");
   const playBtn = document.getElementById("btn-play-tour");
